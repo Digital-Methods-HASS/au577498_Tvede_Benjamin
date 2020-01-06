@@ -43,6 +43,7 @@ averagetotalboxplot +
   geom_bar(stat = "identity", aes(fill = Code))
 
 #Barchart for sharetotal2016
+sharetotal2016plot <- ggplot(data = sharetotal2016, aes (x = Code, y = Smoking_adults_in_percentage))
 sharetotal2016plot +
   geom_bar(stat="identity", aes(fill = Code))
 
@@ -50,3 +51,4 @@ sharetotal2016plot +
 prdaytotal2012plot <- ggplot(data =prdaytotal2012, aes(x = Code, y = Cigarettes_pr_smoker_pr_day))
 prdaytotal2012plot + 
   geom_bar(stat="identity", aes(fill = Code))
+
