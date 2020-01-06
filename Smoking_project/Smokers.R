@@ -23,7 +23,7 @@ NO_prday <- filter(Cigarettes_pr_day, Entity == "Norway")
 MO_prday <- filter(Cigarettes_pr_day, Entity == "Moldova")
 UK_prday <- filter(Cigarettes_pr_day, Entity == "United Kingdom")
 
-#Binding averages, totals and cigarettes_per_day 
+#Combining averages, totals and cigarettes_per_day 
 averagetotal <- rbind(DK_average,NO_average,MO_average,UK_average)
 sharetotal <- rbind(DK_share, NO_share, MO_share, UK_share)
 prdaytotal <- rbind(DK_prday, NO_prday, MO_prday, UK_prday)
