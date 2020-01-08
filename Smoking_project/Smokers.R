@@ -28,6 +28,9 @@ averagetotal <- rbind(DK_average,NO_average,MO_average,UK_average)
 sharetotal <- rbind(DK_share, NO_share, MO_share, UK_share)
 prdaytotal <- rbind(DK_prday, NO_prday, MO_prday, UK_prday)
 
+#finding newest data in averagetotal dataframe (2014)
+averagetotal2014 <- filter(averagetotal, Year == "2014")
+
 #finding newest data in sharetotal dataframe (2016)
 sharetotal2016 <- filter(sharetotal, Year == "2016")
 
@@ -38,7 +41,7 @@ prdaytotal2012 <- filter(prdaytotal, Year == "2012")
 ggplot(data = <DATA>, mapping = aes(<MAPPINGS>)) +  <GEOM_FUNCTION>()
 
 #Barchart for averagetotal
-averagetotalboxplot <- ggplot(data =averagetotal, aes(x = Code, y = Average_price_pr_cigarette)) 
+averagetotalboxplot <- ggplot(data =averagetotal2014, aes(x = Code, y = Average_price_pr_cigarette)) 
 averagetotalboxplot +
   geom_bar(stat = "identity", aes(fill = Code))
 
@@ -49,6 +52,6 @@ sharetotal2016plot +
 
 #Barchart for prdaytotal2012
 prdaytotal2012plot <- ggplot(data =prdaytotal2012, aes(x = Code, y = Cigarettes_pr_smoker_pr_day))
-prdaytotal2012plot + 
+prdaytotal2012plot +
   geom_bar(stat="identity", aes(fill = Code))
 
